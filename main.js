@@ -328,14 +328,11 @@ signinModalSubmitBtn.addEventListener('click', () => {
         
     } else {
         signinModalMessage.innerText = 'Invalid email or password';
+        signinEmailInput.value = '';
+        signinPasswordInput.value = '';
     }
 
     setTimeout(() => {
         signinModalMessage.innerText = '';
     }, 4000);
-
-
-    signinEmailInput.value = '';
-    signinPasswordInput.value = '';
-    signinModalMessage.innerText = '';
 });
