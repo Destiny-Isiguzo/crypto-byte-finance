@@ -688,7 +688,7 @@ header a {
     gap: .35rem;
     padding: .7rem;
     margin-top: 2rem;
-    width: 57rem;
+    width: clamp(21rem, 8.3239rem + 54.0845vw, 57rem);
 }
 
 .blinking-div {
