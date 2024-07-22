@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="resets.css">
+		<script src="main.js" defer></script>
+		<title>Crypto Byte Finance - Invest in the future, today</title>
+	</head>
+
+	<body>
+		<header>
+			<a href="index.html">
+				<img src="images/site-logo.png" alt="" class="site-logo">
+			</a>
+			<nav class="header-nav" id="header-nav">
+				<div class="nav-close-btn" id="nav-close-btn">
+					<i class="fa-solid fa-xmark"></i>
+				</div>
+				<div class="header-nav-links">
+					<a href="#Plans" class="header-link header-nav-link">Investment Plans</a>
+					<a href="#Services" class="header-link header-nav-link">Services</a>
+					<a href="#FAQ" class="header-link header-nav-link">FAQ</a>
+					<!-- <a href="" class="header-link header-nav-link">Contact Us</a> -->
+				</div>
+				<div class="header-nav-btns">
+					<button class="header-signin-btn header-nav-link" id="open-signin-modal">Sign In</button>
+					<button href="" class="header-signup-btn header-nav-link" id="open-register-modal1">Get started</button>
+				</div>
+			</nav>
+			<div class="nav-open-btn" id="nav-open-btn">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+		</header>
+
+		<main>
+			<button type="button" class="back-to-top" id="back-to-top">
+				<i class="bi bi-arrow-up-short"></i>
+			</button>
+
+
+			<section class="hero">
+				<img src="images/Ellipse1.png" alt="" class="ellipse1">
+				<img src="images/Ellipse2.png" alt="" class="ellipse2">
+				<img src="images/Ellipse3.png" alt="" class="ellipse3">
+				<div class="hero-wrapper">
+					<div class="hero-text-wrapper">
+						<div class="hero-h1-wrapper">
+							<h1 class="colored-hero-title">One platform</h1>
+							<h1>all things Crypto</h1>
+						</div>
+						<p class="hero-desc">
+							Open a free account in minutes right from any device and make your money go further
+						</p>
+						<div class="input-wrapper">
+							<input type="email" id="heroEmailInput" placeholder="Email Address...">
+							<button type="button" class="hero-button" id="open-register-modal2">Get started</button>
+						</div>
+					</div>
+					<img src="images/hero-image.png" alt="" class="hero-image">
+				</div>
+				<div class="hero-stats">
+					<div class="hero-stats-box">
+						<h2 class="hero-stat-num">135k+</h2>
+						<p class="hero-stat-desc">active global users</p>
+					</div>
+
+					<div class="hero-stats-box">
+						<h2 class="hero-stat-num">15k</h2>
+						<p class="hero-stat-desc">VIP users</p>
+					</div>
+
+					<div class="hero-stats-box">
+						<h2 class="hero-stat-num">10+</h2>
+						<p class="hero-stat-desc">cryptocurrencies</p>
+					</div>
+
+					<!-- <div class="hero-stats-box">
+							<h2 class="hero-stat-num">5k+</h2>
+							<p class="hero-stat-desc">Companies</p>
+						</div> -->
+				</div>
+			</section>
+			<!-- End of Hero Section -->
+
+
+			<!-- Start of Registration modal -->
+			<div class="register-modal-overlay" id="register-modal-overlay"></div>
+			<div class="register-modal-container" id="register-modal-container">
+				<div class="register-modal-body">
+					<div class="close-register-modal-btn-wrapper" id="close-register-modal-btn">
+						<i class="fa-solid fa-xmark"></i>
+					</div>
+					<form action="#" class="register-modal-form" id="register-modal-form">
+						<h5 class="register-modal-form-title">
+							Create an account
+						</h5>
+						<p class="register-modal-form-desc">
+							Fill in your details below to open a trading & investment account
+						</p>
+						<div class="register-modal-form-input-wrapper">
+							<div class="register-modal-form-fullname-input">
+								<div class="register-modal-form-firstname-wrapper">
+									<label for="fullNameInput">Full name</label>
+									<input type="text" name="fullName" id="fullNameInput" required />
+								</div>
+
+								<!-- <div class="register-modal-form-lastname-wrapper">
+											<label for="lastNameInput">Last name</label>
+											<input type="text" name="lastName" id="lastNameInput" required />
+										</div> -->
+							</div>
+
+							<div class="register-modal-form-email-input">
+								<label for="emailInput">Email</label>
+								<input type="email" name="email" autocomplete="email" id="emailInput" required />
+							</div>
+
+							<div class="register-modal-form-password-input">
+								<div class="register-modal-form-password-wrapper">
+									<label for="passwordInput">Password</label>
+									<input type="password" name="pass" autocomplete="email" id="passwordInput" minlength="8"
+										required />
+									<i class="fa-solid fa-eye-slash" id="togglePasswordVisibility"></i>
+								</div>
+
+								<div class="register-modal-form-password-strength-wrapper">
+									<div>
+										<i class="fa-regular fa-square-check" id="passwordStrengthChar"></i>
+										<!-- <i class="fa-solid fa-square-check" id="passwordStrengthChar"></i> -->
+										<p>at least 8 characters long</p>
+									</div>
+
+									<div>
+										<i class="fa-regular fa-square-check" id="passwordStrengthDigit"></i>
+										<!-- <i class="fa-solid fa-square-check" id="passwordStrengthDigit"></i> -->
+										<p>contains a digit</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="register-modal-submit-btn" id="register-modal-submit-btn">
+							Create account
+						</button>
+						<!-- <div class="register-modal-form-or-wrapper">
+									<div></div>
+									<p>OR</p>
+									<div></div>
+							</div>
+							<div class="register-modal-alternatives-wrapper">
+									<div class="register-modal-alternatives-apple-wrapper">
+										<i class="fa-brands fa-apple"></i>
+										<p>Continue with Apple</p>
+									</div>
+
+									<div class="register-modal-alternatives-facebook-wrapper">
+										<i class="fa-brands fa-facebook-f"></i>
+										<p>Continue with Facebook</p>
+									</div>
+							</div> -->
+					</form>
+					<p class="register-modal-form-accept">
+						By creating an account with us, you agree to our <a href="">Terms of Service</a> and <a href="">Privacy
+							Policy</a>
+					</p>
+				</div>
+			</div>
+			<!-- End of Registration modal -->
+
+
+			<!-- Start of Sign in modal -->
+			<div class="signin-modal-overlay" id="signin-modal-overlay"></div>
+			<div class="signin-modal-container" id="signin-modal-container">
+				<div class="signin-modal-body">
+					<div class="close-signin-modal-btn-wrapper" id="close-signin-modal">
+						<i class="fa-solid fa-xmark"></i>
+					</div>
+
+					<div class="signin-modal-form" id="signin-modal-form">
+						<h5 class="signin-modal-form-title">
+							Welcome back &#128075;
+						</h5>
+						<p class="signin-modal-form-desc">
+							Sign in into your account to access your trading & investment history
+						</p>
+						<div class="signin-modal-form-input-wrapper">
+							<div class="signin-modal-form-email-input">
+								<label for="signinEmailInput">Email</label>
+								<input type="email" autocomplete="email" id="signinEmailInput" />
+							</div>
+
+							<div class="signin-modal-form-password-input">
+								<div class="signin-modal-form-password-wrapper">
+									<label for="signinPasswordInput">Password</label>
+									<input type="password" autocomplete="current-password" id="signinPasswordInput" />
+									<i class="fa-solid fa-eye-slash" id="signinTogglePasswordVisibility"></i>
+								</div>
+							</div>
+						</div>
+						<div class="signin-modal-submit-btn-wrapper">
+							<button type="button" class="signin-modal-submit-btn" id="signin-modal-submit-btn">
+								Sign in
+							</button>
+							<div class="loader" id="loader"></div>
+						</div>
+						<p class="signin-modal-form-message" id="signin-modal-form-message"></p>
+						<!-- <div class="signin-modal-form-or-wrapper">
+									<div></div>
+									<p>Or</p>
+									<div></div>
+							</div> -->
+						<!-- <div class="signin-modal-alternatives-wrapper">
+									<div class="signin-modal-alternatives-apple-wrapper">
+										<i class="fa-brands fa-apple"></i>
+										<p>Apple</p>
+									</div>
+			
+									<div class="signin-modal-alternatives-vk-wrapper">
+										<i class="fa-brands fa-vk"></i>
+										<p>VK</p>
+									</div>
+
+									<div class="signin-modal-alternatives-telegram-wrapper">
+										<i class="fa-brands fa-telegram"></i>
+										<p>Telegram</p>
+									</div>
+							</div> -->
+					</div>
+				</div>
+			</div>
+			<!-- End of Sign in modal -->
+
+
+			<section id="Services" class="services">
+				<div class="services-text-wrapper">
+					<h2 class="services-header">
+						The Most Trusted Cryptocurrency Trading PLatform
+					</h2>
+					<div class="services-content-wrapper">
+						<div class="services-content">
+							<h5 class="services-content-num">01</h5>
+							<div class="services-content-box">
+								<h5 class="services-content-title">
+									Sync between platforms
+								</h5>
+								<p class="services-content-desc">
+									No matter if you're using our web interface or mobile app — your data is always synced. Just one
+									account for all our services.
+								</p>
+							</div>
+						</div>
+
+						<div class="services-divider"></div>
+
+						<div class="services-content">
+							<h5 class="services-content-num">02</h5>
+							<div class="services-content-box">
+								<h5 class="services-content-title">
+									More focus, less clutter
+								</h5>
+								<p class="services-content-desc">
+									No ads, just the crypto and content you love.
+								</p>
+							</div>
+						</div>
+
+						<div class="services-divider"></div>
+
+						<div class="services-content">
+							<h5 class="services-content-num">03</h5>
+							<div class="services-content-box">
+								<h5 class="services-content-title">
+									Security by default
+								</h5>
+								<p class="services-content-desc">
+									Enable privacy mode and app locking to protect your data.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img src="images/services-image1.png" alt="" class="services-image">
+			</section>
+			<!-- End of Services Section -->
+
+
+			<section class="features">
+				<div class="features-box">
+					<img src="images/services-image2.png" alt="" class="features-box-image1">
+					<div class="features-box-text-wrapper">
+						<h2 class="features-box-title">
+							Create portfolio today
+						</h2>
+						<p class="features-box-desc">
+							Buy and sell popular digital currencies, keep track of them in the one place. Has a variety of
+							features that make it the best place to start trading
+						</p>
+					</div>
+				</div>
+
+				<div class="features-box">
+					<div class="features-box-text-wrapper">
+						<h2 class="features-box-title">
+							Lightning-Fast Crypto Trading
+						</h2>
+						<p class="features-box-desc">
+							The Exchange supports USD, EUR, GBP, and other fiat currencies. Invest in cryptocurrency slowly over
+							time by scheduling buys daily, weekly, or monthly
+						</p>
+					</div>
+					<img src="images/services-image3.png" alt="" class="features-box-image2">
+				</div>
+
+				<div class="features-box">
+					<img src="images/services-image4.png" alt="" class="features-box-image3">
+					<div class="features-box-text-wrapper">
+						<h2 class="features-box-title">
+							Security From Day One
+						</h2>
+						<p class="features-box-desc">
+							Safety, security and compliance. Buy and sell popular digital currencies, keep track of them in the
+							one place
+							Our platform is designed with security at its core, and we're committed to keeping your information
+							safe
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- End of Features Section -->
+
+
+			<section class="process">
+				<h2 class="process-title">
+					Get Started in Just a Few Minutes
+				</h2>
+				<p class="process-desc">
+					Has a variety of features that make it the best place to start trading crypto
+				</p>
+				<div class="process-box-wrapper">
+					<div class="process-box">
+						<img src="images/process-image1.png" alt="">
+						<h5 class="process-box-title">Sign Up</h5>
+						<p class="process-box-desc">
+							Sign up for a free wallet on our web version, IOS, or Android and follow our easy process to set up
+							your account
+						</p>
+					</div>
+
+					<div class="process-box">
+						<img src="images/process-image2.png" alt="">
+						<h5 class="process-box-title">Fund</h5>
+						<p class="process-box-desc">
+							Choose you preferred payment method such as bank transfer, external crypto transfer, etc, to top up
+							your wallet
+						</p>
+					</div>
+
+					<div class="process-box">
+						<img src="images/process-image3.png" alt="">
+						<h5 class="process-box-title">Buy Crypto</h5>
+						<p class="process-box-desc">
+							Buy Bitcoin and other cryptocurrencies and securely store them in your wallet or easily send it to
+							friends
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- End of Process Section -->
+
+
+			<section class="investment-plans" id="Plans">
+				<h2 class="investment-plans-title">
+					Investment Plans That Suit Your Needs
+				</h2>
+				<p class="investment-plans-desc">
+					We offer various investment plans for different types of investors, from beginners to experienced.
+					Choose from the various plans and customize your portfolio according to your risk tolerance, budget, and
+					investment goals
+				</p>
+				<div class="investment-plans-wrapper">
+					<div class="investment-plans-box">
+						<h5 class="investment-plans-box-title">Starter</h5>
+						<!-- <p class="investment-plans-box-desc">
+									Suitable for those who are beginners
+							</p> -->
+						<p class="investment-plans-box-price">$345 - $949</p>
+						<p class="max-roi">Maximum ROI - 5.4% APY</p>
+						<p class="duration">Duration - 14 Days</p>
+						<button class="investment-plans-box-btn" id="open-register-modal3">
+							Get started now
+						</button>
+						<div class="investment-plans-box-benefits-wrapper">
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>Real-time crypto trading</p>
+							</div>
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>Email & Chat support</p>
+							</div>
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>Financial reporting</p>
+							</div>
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>Economic Market Survey</p>
+							</div>
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>AI Auto trading</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="investment-plans-box">
+						<h5 class="investment-plans-box-title">Professional</h5>
+						<!-- <p class="investment-plans-box-desc">
+									Suitable for those with experience
+							</p> -->
+						<p class="investment-plans-box-price">$1,504 - $3,050</p>
+						<p class="max-roi">Maximum ROI - 7.02% APY</p>
+						<p class="duration">Duration - 30 Days</p>
+						<button class="investment-plans-box-btn" id="open-register-modal4">
+							Get started now
+						</button>
+						<div class="investment-plans-box-benefits-wrapper">
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>Real-time crypto trading</p>
+							</div>
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>Email & Chat support</p>
+							</div>
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>Financial reporting</p>
+							</div>
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>Economic Market Survey</p>
+							</div>
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>AI Auto trading</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="investment-plans-box">
+						<h5 class="investment-plans-box-title">Gold</h5>
+						<!-- <p class="investment-plans-box-desc">
+									Suitable for high-level investors
+							</p> -->
+						<p class="investment-plans-box-price">$4,738 - $10,233</p>
+						<p class="max-roi">Maximum ROI - 9.85% APY</p>
+						<p class="duration">Duration - 55 Days</p>
+						<button class="investment-plans-box-btn" id="open-register-modal5">
+							Get started now
+						</button>
+						<div class="investment-plans-box-benefits-wrapper">
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>Real-time crypto trading</p>
+							</div>
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>Email & Chat support</p>
+							</div>
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>Financial reporting</p>
+							</div>
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>Economic Market Survey</p>
+							</div>
+							<div class="investment-plans-box-benefit">
+								<i class="bi bi-check"></i>
+								<p>AI Auto trading</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="price-alert-wrapper">
+					<!-- <i class="fa-solid fa-circle-info blinking-div"></i> -->
+					<i class="fa-solid fa-circle blinking-div"></i>
+					<p class="price-alert">
+						Fiat currencies are subject to constant changes due to various economic factors. <a
+							href="https://www.xe.com/currencyconverter/" target="_blank">Check your local currency rates</a>
+					</p>
+				</div>
+			</section>
+			<!-- End of Investment Plans Section -->
+
+
+			<section class="faq__section" id="FAQ">
+				<div class="faq__heading">
+					<h2 class="faq__title">Frequently Asked Questions</h2>
+					<p class="faq__desc">
+						Explore our Frequently Asked Questions to find answers to queries about our investment and trading
+						platform. If you have more questions, hit the live chat button to start a chat with a customer care
+						agent.
+					</p>
+				</div>
+				<div class="faq__boxes-container">
+					<div class="faq__boxes-container-accordion1">
+						<div class="faq__box-accordion-item">
+							<div class="faq__box-accordion-item-header">
+								<p class="faq__box-accordion-title">
+									How do I create an account
+								</p>
+								<i class="bi bi-plus faq__header-icon"></i>
+							</div>
+							<div class="faq__box-accordion-item-body">
+								<div class="faq__box-accordion-item-body-content">
+									<p class="faq__box-accordion-text">
+										To create an account on our platform, simply click on the "Get started" button on our
+										homepage and fill out the required information. You will then receive an email to verify your
+										account, after which you can log in and start trading/investing.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="faq__box-accordion-item">
+							<div class="faq__box-accordion-item-header">
+								<p class="faq__box-accordion-title">
+									What cryptocurrencies do you support
+								</p>
+								<i class="bi bi-plus faq__header-icon"></i>
+							</div>
+							<div class="faq__box-accordion-item-body">
+								<div class="faq__box-accordion-item-body-content">
+									<p class="faq__box-accordion-text">
+										We currently support Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Bitcoin Cash (BCH), and
+										many more cryptocurrencies being added.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="faq__boxes-container-accordion2">
+						<div class="faq__box-accordion-item">
+							<div class="faq__box-accordion-item-header">
+								<p class="faq__box-accordion-title">
+									How do I deposit funds into my account
+								</p>
+								<i class="bi bi-plus faq__header-icon"></i>
+							</div>
+							<div class="faq__box-accordion-item-body">
+								<div class="faq__box-accordion-item-body-content">
+									<p class="faq__box-accordion-text">
+										You can deposit funds using a credit/debit card, bank transfer, or by transferring
+										cryptocurrencies from an external wallet. Simply navigate to the "Deposit" section of your
+										account dashboard and follow the instructions.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="faq__box-accordion-item">
+							<div class="faq__box-accordion-item-header">
+								<p class="faq__box-accordion-title">
+									Is my personal information and account secure
+								</p>
+								<i class="bi bi-plus faq__header-icon"></i>
+							</div>
+							<div class="faq__box-accordion-item-body">
+								<div class="faq__box-accordion-item-body-content">
+									<p class="faq__box-accordion-text">
+										Absolutely! We prioritize the safety and security of our users' information and accounts. Our
+										platform uses state-of-the-art encryption and security measures to protect your data and
+										ensure that all transactions are secure.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End of FAQ Section -->
+
+
+			<section class="testimonial">
+				<h2 class="testimonial-title">
+					What Our Users Are Saying
+				</h2>
+				<div class="testimonial-wrapper">
+					<div class="testimonial-box">
+						<div class="testimonial-box-top">
+							<div class="testimonial-box-image1">
+								<p>SJ</p>
+							</div>
+							<div class="testimonial-box-info">
+								<p class="testimonial-box-name">Sarah Johnson</p>
+								<p class="testimonial-box-job">Marketing Manager</p>
+							</div>
+						</div>
+						<p class="testimonial-box-desc">
+							"I was hesitant to invest in crypto at first, but thanks to Crypto Byte Finance's user-friendly
+							interface and expert analysis, I've seen a 50%+ return on my investment! Their intuitive dashboard and
+							real-time market updates made it easy for me to navigate the crypto world and make informed
+							decisions."
+						</p>
+					</div>
+
+					<div class="testimonial-box">
+						<div class="testimonial-box-top">
+							<div class="testimonial-box-image2">
+								<p>JL</p>
+							</div>
+							<div class="testimonial-box-info">
+								<p class="testimonial-box-name">James Lee</p>
+								<p class="testimonial-box-job">CEO</p>
+							</div>
+						</div>
+						<p class="testimonial-box-desc">
+							"As a busy entrepreneur, I don't have time to monitor the markets 24/7. Crypto Byte Finance's
+							automated trading features have helped me grow my portfolio without sacrificing my busy schedule.
+							Their sophisticated algorithms and customizable settings allow me to trade with confidence, even when
+							I'm not actively watching the markets."
+						</p>
+					</div>
+
+					<div class="testimonial-box">
+						<div class="testimonial-box-top">
+							<div class="testimonial-box-image3">
+								<p>EC</p>
+							</div>
+							<div class="testimonial-box-info">
+								<p class="testimonial-box-name">Emily Chen</p>
+								<p class="testimonial-box-job">Graphic Designer</p>
+							</div>
+						</div>
+						<p class="testimonial-box-desc">
+							"I was new to crypto trading, but Crypto Byte Finance's educational resources and support team helped
+							me get started with
+							confidence. Their comprehensive guides and webinars walked me through the basics, and their responsive
+							customer service
+							team answered all my questions. Now I'm seeing consistent profits!"
+						</p>
+					</div>
+
+					<div class="testimonial-box">
+						<div class="testimonial-box-top">
+							<div class="testimonial-box-image4">
+								<p>DC</p>
+							</div>
+							<div class="testimonial-box-info">
+								<p class="testimonial-box-name">David Cooper</p>
+								<p class="testimonial-box-job">Software Engineer</p>
+							</div>
+						</div>
+						<p class="testimonial-box-desc">
+							"I've tried other trading platforms before, but Crypto Byte Finance's cutting-edge technology and
+							security measures make it
+							stand out. Their state-of-the-art encryption and two-factor authentication give me peace of mind, and
+							their
+							lightning-fast transaction speeds let me capitalize on market opportunities quickly. My investments
+							are safe and
+							growing!"
+						</p>
+					</div>
+
+					<div class="testimonial-box">
+						<div class="testimonial-box-top">
+							<div class="testimonial-box-image5">
+								<p>RP</p>
+							</div>
+							<div class="testimonial-box-info">
+								<p class="testimonial-box-name">Rachel Patel</p>
+								<p class="testimonial-box-job">Financial Analyst</p>
+							</div>
+						</div>
+						<p class="testimonial-box-desc">
+							"Thanks to their expert insights and market analysis, I've made informed investment decisions that
+							have paid
+							off big time! Their team of experienced traders and analysts provide in-depth market commentary and
+							forecasts, helping
+							me stay ahead of the curve. I've never felt more confident in my investments!"
+						</p>
+					</div>
+
+					<div class="testimonial-box">
+						<div class="testimonial-box-top">
+							<div class="testimonial-box-image6">
+								<p>MB</p>
+							</div>
+							<div class="testimonial-box-info">
+								<p class="testimonial-box-name">Michael Brown</p>
+								<p class="testimonial-box-job">Banker</p>
+							</div>
+						</div>
+						<p class="testimonial-box-desc">
+							"I was skeptical about investing in crypto at first, but their transparent fees and reliable
+							withdrawal
+							process have won me over. Their clear and concise fee structure and fast withdrawal times have made me
+							a loyal customer.
+							My portfolio is thriving, and I couldn't be happier with the service!"
+						</p>
+					</div>
+				</div>
+				<a href="" class="more-testimonials">
+					<p>
+						View more
+					</p>
+					<i class="bi bi-arrow-right"></i>
+				</a>
+			</section>
+			<!-- End of TESTIMONIAL Section -->
+
+
+			<!-- <section class="cta">
+					<h1>Ready to take your financial future into your own hands?</h1>
+			</section> -->
+			<!-- End of CTA Section -->
+		</main>
+
+		<footer>
+			<div class="footer-top">
+				<div class="footer-top-section footer-info-wrapper">
+					<img src="images/site-logo.png" alt="Footer Logo" class="footer-logo">
+					<p class="footer-top-desc">
+						We are a digital investment and trading platform that helps individuals and businesses achieve their long
+						term
+						financial goals.
+					</p>
+					<div class="footer-top-social-icons">
+						<a href="" class="facebook-icon" title="Facebook">
+							<i class="fa-brands fa-facebook-f"></i>
+						</a>
+						<a href="" class="instagram-icon" title="Instagram">
+							<i class="fa-brands fa-instagram"></i>
+						</a>
+						<a href="" class="vk-icon" title="Vk">
+							<i class="fa-brands fa-vk"></i>
+						</a>
+						<a href="" class="whatsapp-icon" title="WhatsApp">
+							<i class="fa-brands fa-whatsapp"></i>
+						</a>
+						<a href="" class="telegram-icon" title="Telegram">
+							<i class="fa-brands fa-telegram"></i>
+						</a>
+					</div>
+				</div>
+
+				<div class="footer-top-section">
+					<p class="footer-top-section-title">Company</p>
+					<a href="" class="footer-top-section-link">About Us</a>
+					<a href="" class="footer-top-section-link">Plans & Pricing</a>
+					<a href="" class="footer-top-section-link">Services</a>
+					<a href="" class="footer-top-section-link">FAQ</a>
+					<a href="" class="footer-top-section-link">Careers</a>
+					<a href="" class="footer-top-section-link">Security</a>
+					<a href="" class="footer-top-section-link">Trust & Safety</a>
+					<a href="" class="footer-top-section-link">Newsroom</a>
+				</div>
+
+				<div class="footer-top-section">
+					<p class="footer-top-section-title">Products</p>
+					<a href="" class="footer-top-section-link">Stock & Fund</a>
+					<a href="" class="footer-top-section-link">Cash Card</a>
+					<a href="" class="footer-top-section-link">Crypto</a>
+					<a href="" class="footer-top-section-link">Options</a>
+					<a href="" class="footer-top-section-link">Gold</a>
+					<a href="" class="footer-top-section-link">Learn Snacks</a>
+				</div>
+
+				<div class="footer-top-section">
+					<p class="footer-top-section-title">Learn</p>
+					<a href="" class="footer-top-section-link">What's Trending</a>
+					<a href="" class="footer-top-section-link">Product News</a>
+					<a href="" class="footer-top-section-link">Events</a>
+					<a href="" class="footer-top-section-link">University</a>
+					<a href="" class="footer-top-section-link">Research</a>
+					<a href="" class="footer-top-section-link">Market Updates</a>
+				</div>
+
+				<div class="footer-top-section">
+					<p class="footer-top-section-title">Resources</p>
+					<a href="" class="footer-top-section-link">Prices</a>
+					<a href="" class="footer-top-section-link">Site Widgets</a>
+					<a href="" class="footer-top-section-link">Tax</a>
+					<a href="" class="footer-top-section-link">Support</a>
+				</div>
+
+				<div class="footer-top-section">
+					<p class="footer-top-section-title">Support</p>
+					<a href="" class="footer-top-section-link">Support Center</a>
+					<a href="" class="footer-top-section-link">Contact Us</a>
+					<a href="" class="footer-top-section-link">System Status</a>
+					<a href="" class="footer-top-section-link">Areas of Availability</a>
+				</div>
+			</div>
+			<hr>
+			<div class="footer-bottom">
+				<p>© 2018 - <span id="year"></span> Crypto Byte Finance, CBF trademark. All rights Reserved.</p>
+			</div>
+		</footer>
+
+	</body>
+
+</html>
